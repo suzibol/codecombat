@@ -4,7 +4,13 @@ var lastSource = null;
 var lastOrigin = null;
 window.onerror = function(message, url, line, column, error){
   console.log("User script error on line " + line + ", column " + column + ": ", error);
-  lastSource.postMessage({ type: 'error', message: message, url: url, line: line, column: column }, lastOrigin);
+  lastSource.postMessage({
+    type: 'error',
+    message: message,
+    url: url,
+    line: line || 0,
+    column: column || 0,
+  }, lastOrigin);
 }
 window.addEventListener('message', receiveMessage, false);
 
@@ -80,7 +86,27 @@ function create(options) {
         createFailed = true;
         $('.loading-message').addClass('hidden')
         $('.loading-error').removeClass('hidden')
-        throw(e);
+        const errPos = parseStackTrace(e.stack);
+        lastSource.postMessage({
+          type: 'error',
+          message: `${e.name}: ${e.message}`,
+          line: errPos.line,
+          column: errPos.column,
+        }, lastOrigin);
+    }
+}
+
+function parseStackTrace(trace) {
+    const lines = trace.split('\n')
+    const regex = /.*?at .*? \(eval at globalEval.*?\).*?,.*?(\d+):(\d+)\)$/;
+    const matchedLine = _.find(lines, (line) => {
+        return regex.test(line)
+    })
+    if (!matchedLine) return { line: 0, column: 0 };
+    const match = matchedLine.match(regex);
+    return {
+        line: Number(match[1]),
+        column: Number(match[2]),
     }
 }
 
