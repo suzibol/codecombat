@@ -295,7 +295,7 @@ module.exports = nativeDescription: "Nederlands", englishDescription: "Dutch", t
     select_your_starting_hero: "Kies Je Eerste Held:"
     you_can_always_change_your_hero_later: "Je kan altijd nog van held veranderen."
 #    finish: "Finish"
-#    teacher_ready_to_create_class: "You're ready to create your first class!"
+#    teacher_ready_to_create_class: "You're ready to create your first class!" "Je kunt je eerste klas aanmaken!"
 #    teacher_students_can_start_now: "Your students will be able to start playing the first course, Introduction to Computer Science, immediately."
 #    teacher_list_create_class: "On the next screen you will be able to create a new class."
 #    teacher_list_add_students: "Add students to the class by clicking the View Class link, then sending your students the Class Code or URL. You can also invite them via email if they have email addresses."
@@ -2285,8 +2285,8 @@ module.exports = nativeDescription: "Nederlands", englishDescription: "Dutch", t
 
   ladder_prizes:
     title: "Toernooi prijzen" # This section was for an old tournament and doesn't need new translations now.
-    blurb_1: "Deze prijzen worden uitgereikt volgens de toernamentregels"
-    blurb_2: "De toernamentregels"
+    blurb_1: "Deze prijzen worden uitgereikt volgens de toernooiregels"
+    blurb_2: "De toernooiregels"
     blurb_3: "voor de beste mensen en boemannen."
     blurb_4: "Twee teams, dus dubbele prijzen!"
     blurb_5: "(Er is een gedeelde eerste plek, een gedeelde tweede plek, enz.)"
@@ -2323,13 +2323,13 @@ module.exports = nativeDescription: "Nederlands", englishDescription: "Dutch", t
 #  code_play_create_account_modal:
 #    title: "You did it!" # This section is only needed in US, UK, Mexico, India, and Germany
 #    body: "You are now on your way to becoming a master coder. Sign up to receive an extra <strong>100 Gems</strong> & you will also be entered for a chance to <strong>win $2,500 & other Lenovo Prizes</strong>."
-#    sign_up: "Sign up & keep coding ▶"
-#    victory_sign_up_poke: "Create a free account to save your code & be entered for a chance to win prizes!"
-#    victory_sign_up: "Sign up & be entered to <strong>win $2,500</strong>"
+#    sign_up: "Meld je aan & blijf coderen ▶"
+#    victory_sign_up_poke: "Creëer een gratis account om je code te bewaren & je bent aangemeld als kanshebber om prijzen te winnen!"
+#    victory_sign_up: "Sign up & be entered to <strong>win $2,500</strong>" 
 
 #  server_error:
-#    email_taken: "Email already taken"
-#    username_taken: "Username already taken"
+#    email_taken: "Emailadres bestaat al"
+#    username_taken: "Username bestaat al"
 
 #  esper:
 #    line_no: "Line $1: "
@@ -2339,9 +2339,9 @@ module.exports = nativeDescription: "Nederlands", englishDescription: "Dutch", t
 #    type_error: "TypeError: "
 #    syntax_error: "SyntaxError: "
 #    error: "Error: "
-#    x_not_a_function: "$1 is not a function"
-#    x_not_defined: "$1 is not defined"
-#    spelling_issues: "Look out for spelling issues: did you mean `$1` instead of `$2`?"
+#    x_not_a_function: "$1 is geen functie"
+#    x_not_defined: "$1 is niet bepaald"
+#    spelling_issues: "Kijk uit voor spellingsfouten: bedoelde je $1 in plaats van $2?"
 #    capitalization_issues: "Look out for capitalization: `$1` should be `$2`."
 #    py_empty_block: "Empty $1. Put 4 spaces in front of statements inside the $2 statement."
 #    fx_missing_paren: "If you want to call `$1` as a function, you need `()`'s"
